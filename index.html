@@ -16,12 +16,12 @@
         <v-flex>
 
           <v-toolbar color="#00afdc" dark>
-            <v-toolbar-title>Diagnostic Image Analysis Group</v-toolbar-title>
+            <v-toolbar-title v-html="title"></v-toolbar-title>
           </v-toolbar>
 
           <v-container v-for="(cards, type) in apps" fluid grid-list-md>
 
-            <v-subheader>{{ type }}</v-subheader>
+            <v-subheader v-html="type"></v-subheader>
 
             <v-layout row wrap>
               <v-flex v-for="card in cards" v-bind="{ [`xs${card.flex}`]: true }" :key="card.name">
@@ -31,7 +31,7 @@
                   <v-card-title primary-title>
                     <div>
                       <div class="headline" v-text="card.name"></div>
-                      <span class="grey--text">{{ card.description }}</span>
+                      <span class="grey--text" v-html="card.description"></span>
                     </div>
                   </v-card-title>
                 </v-card>
@@ -51,6 +51,7 @@
     new Vue({
       el: '#app',
       data: () => ({
+        title: "Diagnostic Image Analysis Group",
         apps: {
           Workstations: [
             {
