@@ -1,3 +1,3 @@
-# algorithms.diagnijmegen.nl
+# apps.diagnijmegen.nl
 
-This website has been taken offline! Contact C. Jacobs or J Meakin for questions.
+The source for [https://apps.diagnijmegen.nl]
